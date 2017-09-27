@@ -18,6 +18,8 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /**
+ * MapReduce
+ * <p>
  * Created by liqiangpeng on 2017/7/19.
  */
 public class RunJob {

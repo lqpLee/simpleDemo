@@ -1,4 +1,4 @@
-package org.lee.simpleDemo
+package org.lee.rdd
 
 import org.apache.spark.rdd.RDD
 import org.apache.spark.{SparkConf, SparkContext}
@@ -9,6 +9,9 @@ import org.junit.{Before, Test}
   * ﻿在实际的计算里我们经常会不同的计算算法不停的转化RDD的数据类型，而使用scala开发spark程序时候，我发现scala和javascript很类似，
   * 我们不去指定返回值数据类型，scala编译器也会自动推算结果的数据类型，因此编码时候我们可以不指定具体数据类型。
   * 这个特点就会让我们在实际开发里碰到种种问题，因此我在示例代码里明确了RDD转化后的数据类型。
+  *
+  * 注：也是根据网上的资料搬过来的
+  *
   *
   * Created by liqiangpeng on 2017/9/10.
   */
