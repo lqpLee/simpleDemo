@@ -10,9 +10,6 @@ import org.junit.{Before, Test}
   * 我们不去指定返回值数据类型，scala编译器也会自动推算结果的数据类型，因此编码时候我们可以不指定具体数据类型。
   * 这个特点就会让我们在实际开发里碰到种种问题，因此我在示例代码里明确了RDD转化后的数据类型。
   *
-  * 注：也是根据网上的资料搬过来的
-  *
-  *
   * Created by liqiangpeng on 2017/9/10.
   */
 class RddTest {
@@ -47,7 +44,7 @@ class RddTest {
   @Test
   def _testBase1_filter: Unit = {
     val rdd02 = sc.makeRDD(Array(1, 2, 3, 4, 5, 6))
-    val r02 = rdd02.filter { x => x < 5 } //﻿参数是函数，函数会过滤掉不符合条件的元素，返回值是新的R
+    val r02 = rdd02.filter { x => x < 5 } //﻿参数是函数，函数会过滤掉不符合条件的元素，返回值是新的RDD
     println(">>>>>>>>>>>>>>>>>>>" + r02.collect().mkString(",") + ">>>>>>>>>>>>>>>")
   }
 
@@ -61,7 +58,7 @@ class RddTest {
 
   @Test
   def _testBase1_textFile: Unit = {
-    val rdd: RDD[String] = sc.textFile("file:///Users/liqiangpeng/Downloads/Hamlet.txt", 1)
+    val rdd: RDD[String] = sc.textFile("file:/Users/liqiangpeng/Downloads/Hamlet.txt", 1)
     val r: RDD[String] = rdd.flatMap(x => x.split(","))
     println(r.collect().mkString(","))
   }
@@ -292,19 +289,6 @@ class RddTest {
 
 
   /*=========================================RDD复杂操作1===================================================*/
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 }
