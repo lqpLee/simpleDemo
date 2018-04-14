@@ -13,16 +13,67 @@ public class Queue {
     private int rear;//队尾
     private int nItems;
 
+    public Queue(int s) {
+        maxSize = s;
+        queArray = new long[maxSize];
+        front = 0;
+        rear = -1;
+        nItems = 0;
+    }
+
+    public void insert(long j) {
+        if (rear == maxSize - 1)
+            rear = -1;
+        queArray[++rear] = j;
+        nItems++;
+    }
+
+    public long remove() {
+        long temp = queArray[front++];
+        if (front == maxSize)
+            front = 0;
+        nItems--;
+        return temp;
+    }
+
+    public long peekFront() {
+        return queArray[front];
+    }
+
+    public boolean isEmpty() {
+        return (nItems == 0);
+    }
+
+    public boolean isFull() {
+        return (nItems == maxSize);
+    }
+
+    public int size() {
+        return nItems;
+    }
+
+}
+
+class QueueApp {
     public static void main(String[] args) {
-        int i = 9 ;
-        switch(i) {
-            default:
-                System.out.println("default");
-            case 0 :
-                System.out.println("zero");
-                break ;
-            case 1 : System.out.println("one");
-            case 2 : System.out.println("two");
+        Queue queue = new Queue(5);
+        queue.insert(10);
+        queue.insert(20);
+        queue.insert(30);
+        queue.insert(40);
+
+        queue.remove();
+        queue.remove();
+        queue.remove();
+
+        queue.insert(50);
+        queue.insert(60);
+        queue.insert(70);
+        queue.insert(80);
+
+        while (!queue.isEmpty()) {
+            long n = queue.remove();
+            System.out.println(n);
         }
     }
 }

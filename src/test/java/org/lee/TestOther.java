@@ -8,7 +8,7 @@ import org.junit.Test;
 public class TestOther {
 
     @Test
-    public void testOther() {
+    public void testOther1() {
         try {
             int i = 1 / 0;
             System.out.println("on exception keep running====");
@@ -17,5 +17,12 @@ public class TestOther {
             return;
         }
         System.out.println("out exception keep running=====");
+    }
+
+    @Test
+    public void testOther2(){
+        Integer i1 = 50;
+        Integer i2 = 50;
+        System.out.println(i1==i2);
     }
 }

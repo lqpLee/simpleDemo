@@ -22,9 +22,7 @@ public class ReflectDemo {
         Class c = Class.forName("org.lee.reflex.Person");
         Constructor[] cons = c.getConstructors();
 
-        new Thread(() -> {
-            System.out.println(Thread.currentThread().getName() + "测试多线程使用lamdba实现！");
-        }).start();
+        new Thread(() -> System.out.println(Thread.currentThread().getName() + "测试多线程使用lamdba实现！")).start();
 
         new Thread(new Runnable() {
             @Override
