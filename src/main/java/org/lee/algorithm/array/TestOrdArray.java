@@ -19,7 +19,7 @@ public class TestOrdArray {
         arr.insert(6);
         arr.insert(7);
         arr.insert(8);
-        arr.insert(9);
+        arr.insert(9); 
         arr.insert(10);
 
         System.out.println();
