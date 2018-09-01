@@ -20,9 +20,19 @@ public class TestOther {
     }
 
     @Test
-    public void testOther2(){
+    public void testOther2() {
         Integer i1 = 50;
         Integer i2 = 50;
-        System.out.println(i1==i2);
+        System.out.println(i1 == i2);
+    }
+
+    @Test
+    public void testMath() {
+        int a = 1, b = 2;
+        a = a ^ b;
+        b = b ^ a;
+        a = b ^ a;
+        System.out.println(a);
+        System.out.println(b);
     }
 }
