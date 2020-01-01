@@ -26,8 +26,8 @@ class TestArray {
     b.remove(2)//ArrayBuffer(1,1,8,9,6,2)
     b.remove(2,3)//ArrayBuffer(1,1,2) 移除下标2之后的三个元素
     b.toArray
-    for (i<- 0 until b.length)
-      println("test0  index"+i+": "+b(i));
+    for (i<- b.indices)
+      println("test0  index"+i+": "+b(i))
     val a = Array(4,6,2,3,5,7,11)
 
     scala.util.Sorting.quickSort(a);//排序 Array(2,3,4,5,6,7,11)
@@ -53,7 +53,7 @@ class TestArray {
     */
   @Test
   def testDoJava(): Unit ={
-    val i = DiguiDemo.getRabbitAsArray(12);
+    val i = DiguiDemo.getRabbitAsArray(12)
     print(i)
   }
 
