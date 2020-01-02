@@ -11,7 +11,3 @@
 * rdd-spark
 
 * other
-
-```$xslt
-具体可进包查看
-```
