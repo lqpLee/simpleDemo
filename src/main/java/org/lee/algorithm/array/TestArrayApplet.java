@@ -28,6 +28,7 @@ public class TestArrayApplet {
         System.out.println(intArray.length);//数组一但创建，数组的大小便不可变
     }
 
+
     /**
      * 访问数组数据项
      * <p>
