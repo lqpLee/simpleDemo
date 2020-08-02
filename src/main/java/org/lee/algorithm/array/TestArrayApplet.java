@@ -21,6 +21,7 @@ public class TestArrayApplet {
         /**
          * 等价于
          *
+         *
          *int[] intArray = new int[100];
          *
          *int intArray [] = new int[100];
